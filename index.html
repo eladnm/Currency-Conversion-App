@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Currency Converter</title>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+    <h2>Currency Converter</h2>
+    <button id="convert_now">Convert Now</button>
+        <main>
+            <section class="table">
+                <div class="ribbon ribbon-top-right"><span>AUD/USD</span></div>
+                <h3>AUD/USD</h3>
+                <div class="titles">
+                    <span class="id">#</span>
+                    <span class="title">Description</span>
+                    <span class="value">Value</span>
+                </div>
+                <div class="time">
+                    <span class="id">1</span>
+                    <span class="title">Time</span>
+                    <span id="aud_time" class="val_title"></span>
+                </div>
+                <div class="price">
+                    <span class="id">2</span>
+                    <span class="title">Price</span>
+                    <span id="aud_price" class="val_title"></span>
+                </div>
+                <div class="symbol">
+                    <span class="id">3</span>
+                    <span class="title">Symbol</span>
+                    <span id="aud_symbol" class="val_title"></span>
+                </div>
+            </section>
+            <section class="table">
+                <div class="ribbon ribbon-top-right"><span>GBP/USD</span></div>
+                <h3>GBP/USD</h3>
+                <div class="titles">
+                    <span class="id">#</span>
+                    <span class="title">Description</span>
+                    <span class="value">Value</span>
+                </div>
+                <div class="time">
+                    <span class="id">1</span>
+                    <span class="title">Time</span>
+                    <span id="gbp_time" class="val_title"></span>
+                </div>
+                <div class="price">
+                    <span class="id">2</span>
+                    <span class="title">Price</span>
+                    <span id="gbp_price" class="val_title"></span>
+                </div>
+                <div class="symbol">
+                    <span class="id">3</span>
+                    <span class="title">Symbol</span>
+                    <span id="gbp_symbol" class="val_title"></span>
+                </div>
+            </section>
+            <section class="table">
+                <div class="ribbon ribbon-top-right"><span>JPY/USD</span></div>
+                <h3>JPY/USD</h3>
+                <div class="titles">
+                    <span class="id">#</span>
+                    <span class="title">Description</span>
+                    <span class="value">Value</span>
+                </div>
+                <div class="time">
+                    <span class="id">1</span>
+                    <span class="title">Time</span>
+                    <span id="jpy_time" class="val_title"></span>
+                </div>
+                <div class="price">
+                    <span class="id">2</span>
+                    <span class="title">Price</span>
+                    <span id="jpy_price" class="val_title"></span>
+                </div>
+                <div class="symbol">
+                    <span class="id">3</span>
+                    <span class="title">Symbol</span>
+                    <span id="jpy_symbol" class="val_title"></span>
+                </div>
+            </section>
+        </main> 
+            <form>
+                <div>
+                <label><span>Enter Amount in USD</span>
+                    <input id="amount" type="number">
+                </label>
+                <label id="selectCur"><span>Select Currency</span>
+                    <select>
+                        <option class="chooseCur" value="AUD">AUD</option>
+                        <option class="chooseCur" value="GBP">GBP</option>
+                        <option class="chooseCur" value="JPY">JPY</option>
+                    </select>
+                </label>
+                </div>
+                <div><input type="submit" class="btn btn-success center-block" value="Convert"></input></div>
+                <div><span id="result">Result:</span></div>
+                <div><span id="yourResult"></span></div>
+            </form>
+
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js.js"></script>	
+</body>
+</html>
