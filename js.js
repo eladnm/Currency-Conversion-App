@@ -1,6 +1,6 @@
 getDataNow();
 function getDataNow(){
-        $.get("https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD", getData);
+        $.get("https://forex.1forge.com/1.0.2/quotes?pairs=EURUSD,GBPJPY,AUDUSD&api_key=QSzFlcDwaXtfevSu4Oo98AsJb4fKMGio", getData);
 }
 function getData(result) {
     $('#aud_time').text(result[0].timestamp); 
@@ -14,7 +14,7 @@ function getData(result) {
     $('#jpy_symbol').text(result[2].symbol);  
     };
     function RefreshDataNow(){
-        $.get("https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD", RefreshData);
+        $.get("https://forex.1forge.com/1.0.2/quotes?pairs=EURUSD,GBPJPY,AUDUSD&api_key=QSzFlcDwaXtfevSu4Oo98AsJb4fKMGio", RefreshData);
 }
     function RefreshData(result) {
     $('#aud_time').text(convertToTime(result[0].timestamp)); 
@@ -34,7 +34,7 @@ function convertToTime(timestamp){
   
  setInterval(function() {
     RefreshDataNow();
-}, 800);
+}, 10000);
  $("#convert_now").click(function(){
   $("form").show(); 
 });
@@ -46,7 +46,7 @@ $('form').submit(function(e) {
     var amount = $('#amount').val();
     console.log(amount);
     var result = $('#yourResult').val();
-    var test= $.get('https://forex.1forge.com/1.0.1/convert?from=USD&to=' + currency  + '&'  + 'quantity=' + amount, function(response) {
+    var test= $.get('https://forex.1forge.com/1.0.2/convert?from=USD&to=' + currency  + '&'  + 'quantity=' + amount + '&' + 'api_key=QSzFlcDwaXtfevSu4Oo98AsJb4fKMGio', function(response) {
     $('#yourResult').text(response.value);
     console.log(test);
   });
