@@ -2,23 +2,51 @@ body {
     margin: 0px;
 font-family: 'Arimo';
 font-size: 16px;
-
 }
 main {
-    display: flex;
     justify-content: center;
 }
 header {
     text-align: center
 }
+#headContain{
+  position: relative;
+}
 h2 {
+  position: relative;
 	text-align: center;
 	color:blue;
 	font-weight: bold;
 }
+@media (min-width: 992px){
+.col-md-4 {
+    width: 30%;
+  }
+}
+@media (max-width: 992px){
+body {
+    font-size: 28px;
+  }
+}
+#shoot{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 button#convert_now {
-    position: relative;
-    left: 45%;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  margin:0 auto;
   background:blue;
   padding:5px 10px;
   color:#fff;
@@ -63,13 +91,7 @@ button#convert_now {
     100% { opacity: 1.0; }
 }
 }
-input.btn {
-width:50%;
 
-}
-.table {
-width:80%;
-}
 header button {
     border: none;
     padding: 1rem;
@@ -78,8 +100,7 @@ header button {
     color: #ccc; 
 }
 section {
-    width: 25%;
-    height: 25%;
+
     border: 1px solid #555;
     margin: 1rem;
     position: relative;
@@ -90,7 +111,6 @@ section h3 {
     border-bottom: 1px solid #bbb;
     padding: 10px;
     font-weight: normal;
-    display: flex;
     align-items: center;
 }
 section h3 img {

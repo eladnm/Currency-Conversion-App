@@ -25,7 +25,7 @@ function getData(result) {
     $('#jpy_price').text(result[2].price);
 };
 function convertToTime(timestamp){
-    var time = new Date(timestamp);
+    var time = new Date(timestamp *1000);
     var hours = time.getHours();
     var minutes = time.getMinutes();
     var seconds = time.getSeconds();

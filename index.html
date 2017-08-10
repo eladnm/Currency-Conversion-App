@@ -8,10 +8,13 @@
 		<link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-    <h2>Currency Converter</h2>
-    <button id="convert_now">Convert Now</button>
-        <main>
-            <section class="table">
+    <div id="headContain">
+        <h2>Currency Converter</h2>
+        <button id="convert_now">Convert Now</button>
+    </div>
+    <main class="container-fluid">
+        <div class="row">
+            <section class="col-xs-12 col-md-4">
                 <div class="ribbon ribbon-top-right"><span>AUD/USD</span></div>
                 <h3>AUD/USD</h3>
                 <div class="titles">
@@ -33,9 +36,9 @@
                     <span class="id">3</span>
                     <span class="title">Symbol</span>
                     <span id="aud_symbol" class="val_title"></span>
-                </div>
-            </section>
-            <section class="table">
+                </div>       
+            </section>   
+            <section class="col-xs-12 col-md-4">
                 <div class="ribbon ribbon-top-right"><span>GBP/USD</span></div>
                 <h3>GBP/USD</h3>
                 <div class="titles">
@@ -58,8 +61,8 @@
                     <span class="title">Symbol</span>
                     <span id="gbp_symbol" class="val_title"></span>
                 </div>
-            </section>
-            <section class="table">
+            </section> 
+            <section class="col-xs-12 col-md-4">
                 <div class="ribbon ribbon-top-right"><span>JPY/USD</span></div>
                 <h3>JPY/USD</h3>
                 <div class="titles">
@@ -81,9 +84,10 @@
                     <span class="id">3</span>
                     <span class="title">Symbol</span>
                     <span id="jpy_symbol" class="val_title"></span>
-                </div>
+                </div>   
             </section>
-        </main> 
+        </div>     
+    </main> 
             <form>
                 <div>
                 <label><span>Enter Amount in USD</span>
@@ -97,7 +101,7 @@
                     </select>
                 </label>
                 </div>
-                <div><input type="submit" class="btn btn-success center-block" value="Convert"></input></div>
+                <div><input type="submit" id="shoot" value="Convert"></input></div>
                 <div><span id="result">Result:</span></div>
                 <div><span id="yourResult"></span></div>
             </form>
